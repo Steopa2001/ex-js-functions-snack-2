@@ -17,7 +17,7 @@
 // }
 // console.log(somma(20, 20))
 
-//sintassi arrow function 
+//sintassi arrow function
 // const somma = (a, b) => a + b;
 
 // console.log(somma(10, 7))
@@ -42,3 +42,19 @@
 // }
 // const somma = (a, b) => a + b;
 // console.log(eseguiOperazione(2, 8, somma))
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// SNACK 4
+// Crea un generatore di funzioni creaTimer
+
+// Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione che avvia un setTimeout per stampare "Tempo scaduto!".
+// function creaTimer(tempo) {
+//   return function () {
+//     setTimeout(() => {
+//       console.log("Tempo scaduto!");
+//     }, tempo);
+//   };
+// }
+// const timer = creaTimer(2000);
+// timer();

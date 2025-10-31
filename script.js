@@ -114,3 +114,23 @@
 //   }, stop);
 // }
 // eseguiEferma("Ciao ogni secondo!", 1000, 5000);
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// SNACK 8
+// Crea una funzione che simula un conto alla rovescia
+
+// Scrivi una funzione contoAllaRovescia che accetta un numero n e stampa il conto alla rovescia da n a 0, con un intervallo di 1 secondo tra ogni numero. Quando arriva a 0, stampa "Tempo scaduto!" e interrompe il timer.
+// function contoAllaRovescia(n) {
+//   let count = n;
+//   const intervalId = setInterval(() => {
+//     console.log(count);
+//     count--;
+
+//     if (count < 0) {
+//       clearInterval(intervalId);
+//       console.log("Tempo scaduto!");
+//     }
+//   }, 1000);
+// }
+// contoAllaRovescia(5);

@@ -163,19 +163,17 @@
 
 // Scrivi una funzione creaThrottler che accetta una funzione e un tempo `limite`.
 // Restituisce una nuova funzione che, quando chiamata ripetutamente, esegue l'operazione originale al massimo una volta ogni n millisecondi.
-function creaThrottler(fn, tempoLimite) {
-  let inAttesa = false;
-
-  return function (...args) {
-    if (!inAttesa) {
-      fn(...args); 
-      inAttesa = true; 
-
-      setTimeout(() => {
-        inAttesa = false; 
-      }, tempoLimite);
-    }
-  };
+function creaThrottler(callback, tempoLimite) {
+let ultimaEsecuzione = 0;
+return function (...args){
+  const ora = Date.now();
+  if(ora - ultimaEsecuzione >= tempoLimite){
+    ultimaEsecuzione = ora;
+    callback(...args); 
+  }else {
+    console.log('Non posso eseguire')
+  }
+}
 }
 const throttledLog = creaThrottler(() => console.log("Eseguito!"), 2000);
 
